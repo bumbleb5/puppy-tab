@@ -11,6 +11,12 @@ a {
     padding: 15px;
     text-align: right;
     color: #FAFAFA;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+a:hover {
+    transform: scale(1.5);
 }
 
 .nav-bar {
@@ -22,15 +28,52 @@ a {
     width: 100%;
     flex-flow: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: stretch;
 }
 
 .nav-bar h1 {
     margin: 10px;
+    flex-grow: 1;
+    text-align: left;
+    justify-content: space-around;
+    flex-basis: auto;
+    position: relative;
+    left: 20px;
+    
 }
 
 .quick-links {
     flex-direction: row-reverse;
     text-align: right;
     margin: 20px;
+    justify-content: space-between;
+    flex-basis: auto;
+    flex-grow: 2;
+    align-content: stretch;
+}
+
+.quick-links span {
+    flex-grow: 2;
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid #FAFAFA;
+    border-radius: 5px;
+    position: relative;
+    right: 15px;
+}
+/*
+    transition: transform .2s;
+}
+
+.quick-links span:hover {
+    transform: scale(1.5);
+}
+*/
+.quick-links a {
+    transition: transform .2s;
+}
+
+.quick-links a:hover {
+    transform: scale(1.5)
 }

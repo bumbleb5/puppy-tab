@@ -8,35 +8,29 @@ body {
 }
 
 a {
-    padding: 15px;
     text-align: right;
     color: #FAFAFA;
     text-decoration: none;
-    transition: transform .2s;
 }
 
-a:hover {
-    transform: scale(1.5);
-}
+/*navigation bar*/
 
 .nav-bar {
     background-color: #011936;
     color: #6BA292;
     font-size: 20px;
     display: inline-flex;
-    height: 100px;
+    height: 90px;
     width: 100%;
-    flex-flow: wrap;
+    flex-flow: nowrap;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
-    align-content: stretch;
 }
 
 .nav-bar h1 {
     margin: 10px;
     flex-grow: 1;
     text-align: left;
-    justify-content: space-around;
     flex-basis: auto;
     position: relative;
     left: 20px;
@@ -44,36 +38,74 @@ a:hover {
 }
 
 .quick-links {
-    flex-direction: row-reverse;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    flex-flow: nowrap;
     text-align: right;
     margin: 20px;
-    justify-content: space-between;
-    flex-basis: auto;
-    flex-grow: 2;
+    justify-content: flex-end;
     align-content: stretch;
+    min-width: 700px;
 }
 
-.quick-links span {
-    flex-grow: 2;
+.quick-links a {
     padding: .5em;
     margin: .5em;
     border: 1px solid #FAFAFA;
     border-radius: 5px;
     position: relative;
     right: 15px;
-}
-/*
-    transition: transform .2s;
-}
-
-.quick-links span:hover {
-    transform: scale(1.5);
-}
-*/
-.quick-links a {
-    transition: transform .2s;
+    flex-basis: auto;
+    flex-grow: 1;
 }
 
-.quick-links a:hover {
-    transform: scale(1.5)
+/*pet cards*/
+
+.household {
+    display: inline-flex;
+
+}
+
+.pet-card {
+    display: inline-flex;
+    border: 2px solid #011936;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15px;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: auto;
+    min-height: 650px;
+    min-width:  650px;
+}
+
+table, tbody, th, tr, td {
+    font-size: 35px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #011936;
+    border: 1px solid #011936;
+    padding: 10px;
+}
+
+table caption {
+    font-size: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #011936;
+}
+
+.pet-picture {
+    object-fit: contain;
+    height: 135px;
+    width: auto;
+}
+
+.pet-picture-frame {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }

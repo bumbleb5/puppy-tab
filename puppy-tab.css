@@ -26,6 +26,8 @@ breakpoint - 900px*/
     flex-flow: nowrap;
     justify-content: flex-start;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .nav-bar h1 {

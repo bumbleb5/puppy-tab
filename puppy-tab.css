@@ -45,7 +45,7 @@ breakpoint - 900px*/
     flex-direction: row;
     flex-flow: nowrap;
     text-align: right;
-    margin: 40px;
+    margin: 25px;
     justify-content: flex-end;
     align-content: stretch;
     min-width: 700px;
@@ -63,7 +63,15 @@ breakpoint - 900px*/
 }
 
 .nav-tile {
-    margin: 10px;
+    margin: 10px 0px 10px 20px;
+}
+
+#hamburger-icon {
+    visibility: hidden;
+    color: #6BA292;
+    position: absolute;
+    right: 35px;
+    margin: 10px 0px 10px 10px;
 }
 
 /*pet cards*/
@@ -141,6 +149,29 @@ table caption {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+/*media inquiry and footer*/
+
+@media only screen and (max-width: 900px) {
+    .nav-bar h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+    }
+    .quick-links {
+        visibility: hidden;
+    }
+    .quick-links a {
+        visibility: hidden;
+    }
+    #hamburger-icon {
+        visibility: visible;
+    }
+    .nav-tile {
+        visibility: hidden;
+    }
 }
 
 footer {

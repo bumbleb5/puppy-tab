@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
@@ -21,7 +27,7 @@ breakpoint - 900px*/
     color: #6BA292;
     font-size: 20px;
     display: inline-flex;
-    height: 90px;
+    height: 10vh;
     width: 100%;
     flex-flow: nowrap;
     justify-content: flex-start;
@@ -37,6 +43,8 @@ breakpoint - 900px*/
     flex-basis: auto;
     position: relative;
     left: 40px;
+    letter-spacing: 1px;
+    max-width: 161.17px;
 }
 
 .quick-links {
@@ -54,7 +62,6 @@ breakpoint - 900px*/
 .quick-links a {
     padding: .5em;
     /*margin: .5em;*/
-    border: 1px solid #FAFAFA;
     border-radius: 5px;
     position: relative;
     right: 15px;
@@ -66,12 +73,37 @@ breakpoint - 900px*/
     margin: 10px 0px 10px 20px;
 }
 
-#hamburger-icon {
-    visibility: hidden;
-    color: #6BA292;
+/* .line {
+    background-color: #6BA292;
     position: absolute;
     right: 35px;
     margin: 10px 0px 10px 10px;
+    width: 25px;
+    height: 2px;
+} */
+
+.hamburger-icon div {
+    background-color: #6BA292;
+    margin: 4px 0px 4px 10px;
+    width: 25px;
+    height: 2px;
+}
+
+.line1 {
+    top: 20px;
+}
+
+.line2 {
+    top: 30px;
+}
+
+.line3 {
+    top: 40px;
+}
+
+.hamburger-icon {
+    display: none;
+    box-sizing: border-box;
 }
 
 /*pet cards*/
@@ -153,24 +185,64 @@ table caption {
 
 /*media inquiry and footer*/
 
-@media only screen and (max-width: 900px) {
-    .nav-bar h1 {
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        text-align: center;
-    }
-    .quick-links {
-        visibility: hidden;
+@media screen and (max-width: 1034px) {
+    body {
+        overflow-x: hidden;
     }
     .quick-links a {
-        visibility: hidden;
+        position: relative;
+        right: 35px;
+        width: 400px;
+        color: #E8E8E8;
+        font-weight: 900;
+        z-index: 1;
+        opacity: 0;
     }
-    #hamburger-icon {
-        visibility: visible;
+    .quick-links nav {
+        width: 600px;
     }
-    .nav-tile {
-        visibility: hidden;
+   .quick-links {
+       height: 90vh;
+       position: absolute;
+       top: 10vh;
+       right: 0px;
+       background-color: #011936;
+       margin: 0px;
+       width: 400px;
+       min-width: 400px;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       align-items: center;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+   }
+   .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #011936;
+    position: absolute;
+    right: 35px;
+    min-width: 45px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
